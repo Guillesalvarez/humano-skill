@@ -1,6 +1,6 @@
 ---
 name: humano
-description: Escribe o reescribe texto para que suene humano y no a IA, evitando los patrones de "Signs of AI writing" de Wikipedia. Úsala cuando el usuario invoque /humano, pida "humanizar" un texto, o pida redactar algo (correos, posts, artículos, README, mensajes, descripciones de PR) que no deba sonar a IA.
+description: Escribe o reescribe texto para que suene humano y no a IA, evitando los patrones de "Signs of AI writing" de Wikipedia. Úsala cuando el usuario invoque /humano o $humano, pida "humanizar" un texto, o pida redactar algo (correos, posts, artículos, README, mensajes, descripciones de PR) que no deba sonar a IA.
 ---
 
 # /humano
@@ -17,6 +17,12 @@ Escribe (o reescribe) texto que suene a una persona concreta con algo que decir,
 
 La IA se va hacia lo estadísticamente común: hechos concretos se vuelven prosa genérica, positiva e inflada. La cura no es quitar palabras sueltas, es **ser específico**: nombres, cifras, fechas, ejemplos reales, una opinión clara. Si no tienes un dato concreto, di menos, no rellenes. No inventes datos ni fuentes.
 
+## Criterio y contexto
+
+Las listas siguientes son señales para revisar, no prohibiciones absolutas. Conserva las palabras, estructuras, listas, negritas y signos que aporten claridad o que el usuario solicite. Adapta la voz, el formato y la formalidad al propósito, el destinatario y el tipo de texto; en trabajos académicos conserva el rigor, las citas y los requisitos indicados.
+
+Al reescribir, conserva el sentido, los hechos, las cifras, las citas y el grado de certeza del original. No conviertas una hipótesis en un hecho ni ocultes una limitación relevante. Si falta información indispensable, indícalo o pregunta; no la inventes.
+
 ## Lo que NO debes hacer
 
 ### 1. Contenido
@@ -30,7 +36,7 @@ La IA se va hacia lo estadísticamente común: hechos concretos se vuelven prosa
 - **Lenguaje promocional**: "vibrante", "rico", "enclavado en el corazón de", "innovador", "reconocido", "impresionante", "amplia gama de".
 - **Muletillas de relleno y avisos**: "es importante señalar/recordar que", "cabe destacar", "vale la pena mencionar", "no hay mucha información disponible", "mantiene un perfil bajo".
 - **Marcos correctivos** (modelos recientes): "debe tratarse como X y no como Y", "no establece por sí mismo que", "no debe confundirse con".
-- **Declaraciones de límite de conocimiento o rechazos**: "hasta mi última actualización", "como modelo de lenguaje".
+- **Muletillas sobre límites**: evita fórmulas innecesarias como "como modelo de lenguaje". Si existe incertidumbre, falta de verificación o una limitación relevante, explícalo de forma clara y breve.
 
 ### 2. Lenguaje y gramática
 - **Vocabulario de IA en densidad**: crucial, fundamental, clave (como adjetivo comodín), pivotal, robusto, vibrante, intrincado, tapiz (metafórico), panorama (abstracto), sumergirse/adentrarse ("delve"), destacar/resaltar (verbo), subrayar, potenciar, fomentar/cultivar, aprovechar ("leverage"), multifacético, atractivo, "no solo… sino también", además (al inicio de frase), "valioso". Una palabra suelta no delata; varias juntas sí. Los modelos nuevos añaden: desafío, priorizar, discretamente, constante, práctico, "importa".
@@ -55,7 +61,7 @@ La IA se va hacia lo estadísticamente común: hechos concretos se vuelven prosa
 ### 5. Citas y referencias
 - No inventes DOI, ISBN, URLs, páginas, autores ni citas. Si no tienes la fuente, no la cites.
 - Elimina parámetros de rastreo como `utm_source=openai` o `utm_source=chatgpt.com` de cualquier enlace.
-- Referencias a libros sin página, enlaces sospechosos o genéricos (example.com) son señal de alucinación.
+- Una referencia a un libro sin página no es necesariamente falsa: sigue la norma solicitada y usa páginas verificadas cuando corresponda. Comprueba los enlaces y no presentes fuentes no verificadas como confirmadas.
 
 ### 6. Mensajes de commit, PR y resúmenes de cambios
 - Evita las fórmulas: "garantiza el cumplimiento de", "mejora la claridad y el flujo", "refinado, mejorado, optimizado", "preservando el significado original", "se evitó…", "se añadieron fuentes verificadas".
@@ -68,7 +74,7 @@ La IA se va hacia lo estadísticamente común: hechos concretos se vuelven prosa
 - Acepta afirmaciones directas ("es el mejor", "fue el primero") cuando son ciertas y está sustentado, y usa matices solo cuando de verdad hay duda ("quizá", "suele", "bastante").
 - Varía la longitud de las frases. Alguna corta. Alguna larga que se permite un par de subordinadas.
 - Se queda en el tema y se calla cuando ya lo dijo. Sin párrafo de cierre.
-- Tiene voz: una opinión, una objeción, un detalle raro, un ejemplo que solo conoce quien lo vivió.
+- Tiene voz: usa opiniones, objeciones y experiencias aportadas por el usuario. No le atribuyas vivencias, posturas ni datos personales que no haya proporcionado.
 - Respeta el registro de quien lo firma. Si el usuario escribe informal, el texto sale informal.
 
 ## Señales que NO son prueba de IA (no las "arregles")
@@ -79,13 +85,13 @@ Gramática perfecta, registro formal, un "además" o "sin embargo" suelto, prosa
 
 1. **Entiende el propósito, el lector y la voz.** Si el usuario dio muestras de su escritura, imítalas.
 2. **Reúne los hechos concretos.** Si faltan, pregunta o escribe menos; no rellenes.
-3. **Redacta en prosa**, directo, sin introducción ni cierre de cortesía.
-4. **Revisa contra las listas de arriba.** Busca: vocabulario de IA, "sirve como", "no solo… sino", tríadas, gerundios de cierre, guiones largos, negritas, resumen final, frases de la misma longitud. Reescribe lo que salte.
+3. **Redacta de forma directa**, con el formato apropiado para el encargo, sin introducción ni cierre de cortesía innecesarios.
+4. **Revisa contra las listas de arriba.** Busca: vocabulario de IA, "sirve como", "no solo… sino", tríadas, gerundios de cierre, guiones largos, negritas, resumen final, frases de la misma longitud. Reescribe solo lo que perjudique la claridad, la precisión o la voz; conserva lo que cumpla una función.
 5. **Lee en voz alta mentalmente.** ¿Lo diría alguien así? Si suena a folleto o a ensayo escolar, bájalo a tierra.
 6. **Entrega solo el texto.** Una nota breve solo si hubo que suponer un dato o falta información.
 
 ## Ejemplo
 
-IA: "El café Aurora se erige como un testimonio vibrante de la rica tradición cafetera de la ciudad, ofreciendo a sus visitantes una experiencia única y contribuyendo a fortalecer la identidad cultural del barrio."
+IA: "El café Aurora, abierto en 1987 en la calle Mercaderes, ofrece una experiencia vibrante y auténtica: cuenta con doce mesas y tuesta el grano en el local."
 
-Humano: "El café Aurora abrió en 1987 en la calle Mercaderes. Tiene doce mesas, tuesta el grano en el local y casi todo el mundo pide el cortado."
+Humano: "El café Aurora abrió en 1987 en la calle Mercaderes. Tiene doce mesas y tuesta el grano en el local."
