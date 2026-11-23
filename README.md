@@ -4,30 +4,29 @@ Skill para Claude Code y OpenAI Codex que escribe o reescribe textos en español
 
 ## Instalación
 
-Clona el repositorio y entra en su carpeta:
-
-```bash
-git clone https://github.com/Guillesalvarez/humano-skill.git
-cd humano-skill
-```
+En macOS o Linux, abre la Terminal y copia el bloque completo de la herramienta que uses. Cada bloque descarga la skill desde este repositorio; no necesitas clonar el proyecto. Para actualizarla, ejecuta nuevamente el mismo bloque: reemplazará el archivo `SKILL.md` instalado.
 
 ### Claude Code
 
 ```bash
-mkdir -p ~/.claude/skills
-cp -R humano ~/.claude/skills/
+mkdir -p ~/.claude/skills/humano && curl -fL https://raw.githubusercontent.com/Guillesalvarez/humano-skill/main/humano/SKILL.md -o ~/.claude/skills/humano/SKILL.md
 ```
 
 ### Codex
 
-Para usar la skill en todos tus proyectos:
+Para usarla en todos tus proyectos:
 
 ```bash
-mkdir -p ~/.agents/skills
-cp -R humano ~/.agents/skills/
+mkdir -p ~/.agents/skills/humano && curl -fL https://raw.githubusercontent.com/Guillesalvarez/humano-skill/main/humano/SKILL.md -o ~/.agents/skills/humano/SKILL.md
 ```
 
-Para instalarla solo en el proyecto actual, copia la carpeta en `.agents/skills/` dentro de ese proyecto. Inicia una sesión nueva para que Codex detecte la skill.
+Para instalarla solo en el proyecto actual, ejecuta este comando desde la carpeta del proyecto:
+
+```bash
+mkdir -p .agents/skills/humano && curl -fL https://raw.githubusercontent.com/Guillesalvarez/humano-skill/main/humano/SKILL.md -o .agents/skills/humano/SKILL.md
+```
+
+Inicia una sesión nueva para que la herramienta detecte la skill.
 
 ## Uso
 
