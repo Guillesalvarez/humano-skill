@@ -35,3 +35,10 @@ Para instalarla solo en el proyecto actual, copia la carpeta en `.agents/skills/
 - En Codex, escribe `$humano` seguido de tus instrucciones o del texto que quieres reescribir. También puedes pedir que use la skill humano.
 
 La misma skill funciona en ambos; no es necesario mantener dos versiones de sus instrucciones.
+
+
+### ¿Por qué `/humano` en Claude Code y `$humano` en Codex?
+
+Cada herramienta usa una forma distinta de invocar sus skills. Claude Code utiliza `/humano`, mientras que Codex permite mencionar la skill con `$humano`. En Codex, la barra `/` se usa para comandos de la aplicación.
+
+Es la misma skill y conserva las mismas instrucciones en ambas herramientas; solo cambia la forma de llamarla. En Codex también puedes escribir, por ejemplo: «usa la skill humano para reescribir este texto». Para que la encuentre, primero debes instalarla en el entorno donde la vas a usar.
