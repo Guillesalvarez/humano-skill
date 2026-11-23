@@ -26,7 +26,9 @@ Para instalarla solo en el proyecto actual, ejecuta este comando desde la carpet
 mkdir -p .agents/skills/humano && curl -fL https://raw.githubusercontent.com/Guillesalvarez/humano-skill/main/humano/SKILL.md -o .agents/skills/humano/SKILL.md
 ```
 
-Inicia una sesión nueva para que la herramienta detecte la skill.
+## ¡Reinicia!
+
+Después de instalar la skill, cierra y vuelve a abrir Codex o Claude Code para que la detecte. Luego inicia una conversación nueva y escribe `$humano` en Codex o `/humano` en Claude Code.
 
 ## Uso
 
